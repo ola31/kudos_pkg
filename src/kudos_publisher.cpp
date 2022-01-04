@@ -14,6 +14,7 @@ int main(int argc, char **argv)
 
     ros::Publisher number_pub = nh.advertise<std_msgs::Int8>("number", 1000);
     ros::Subscriber number_sub = nh.subscribe("number", 1000, numberCallback);
+    ros::Subscriber number_sub = nh.subscribe("number2", 1000, number2Callback);
 
 
     ros::Rate loop_rate(10);
